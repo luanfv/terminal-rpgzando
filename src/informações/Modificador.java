@@ -149,48 +149,24 @@ public class Modificador {
 		return forca;
 	}
 
-	private void setForca(int forca) {
-		this.forca = forca;
-	}
-
 	public int getDestreza() {
 		return destreza;
-	}
-
-	private void setDestreza(int destreza) {
-		this.destreza = destreza;
 	}
 
 	public int getInteligencia() {
 		return inteligencia;
 	}
 
-	private void setInteligencia(int inteligencia) {
-		this.inteligencia = inteligencia;
-	}
-
 	public int getSabedoria() {
 		return sabedoria;
-	}
-
-	private void setSabedoria(int sabedoria) {
-		this.sabedoria = sabedoria;
 	}
 
 	public int getConstituicao() {
 		return constituicao;
 	}
 
-	private void setConstituicao(int constituicao) {
-		this.constituicao = constituicao;
-	}
-
 	public int getCarisma() {
 		return carisma;
-	}
-
-	private void setCarisma(int carisma) {
-		this.carisma = carisma;
 	}
 	
 	public String toString() {

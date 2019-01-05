@@ -6,7 +6,6 @@ import java.util.Scanner;
 import classes.Barbaro;
 import classes.Bardo;
 import classes.Bruxo;
-import classes.ClassePersonagem;
 import classes.Clerigo;
 import classes.Druida;
 import classes.Feiticeiro;
@@ -16,8 +15,10 @@ import classes.Mago;
 import classes.Monge;
 import classes.Paladino;
 import classes.Patrulheiro;
+import informações.ClassePersonagem;
 import informações.Modificador;
 import informações.Personagem;
+import informações.RacaPersonagem;
 import raça.Anao;
 import raça.AnaoColina;
 import raça.AnaoMontanha;
@@ -33,9 +34,6 @@ import raça.Halfling;
 import raça.HalflingLeve;
 import raça.HalflingRobusto;
 import raça.Humano;
-import raça.RacaPersonagem;
-
-// NÃO ESTA FUNCIONANDO PERFEITAMENTO, SUSPEITO QUE SEJA O MODIFICADOR
 
 public class Program {
 
@@ -43,6 +41,7 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		// IMPORTAÇÕES
 		Personagem personagem = new Personagem();
 		Anao anao = new Anao();
 		AnaoColina anaoColina = new AnaoColina();
@@ -76,6 +75,7 @@ public class Program {
 
 		byte escolha;
 
+		// ESCOLHA DE RAÇA
 		do {
 			System.out.println("ESCOLHA UMA RAÇA");
 			EscolhaRacas();
@@ -103,13 +103,13 @@ public class Program {
 
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					racaPersonagem = new RacaPersonagem(anaoColina.getNome(),anaoColina.getForca(), anaoColina.getDestreza(),
-							anaoColina.getInteligencia(), anaoColina.getSabedoria(), anaoColina.getConstituicao(),
-							anaoColina.getCarisma());
+					racaPersonagem = new RacaPersonagem(anaoColina.getNome(), anaoColina.getForca(),
+							anaoColina.getDestreza(), anaoColina.getInteligencia(), anaoColina.getSabedoria(),
+							anaoColina.getConstituicao(), anaoColina.getCarisma());
 				} else if (escolha == 2) {
-					racaPersonagem = new RacaPersonagem(anaoMontanha.getNome(),anaoMontanha.getForca(), anaoMontanha.getDestreza(),
-							anaoMontanha.getInteligencia(), anaoMontanha.getSabedoria(), anaoMontanha.getConstituicao(),
-							anaoMontanha.getCarisma());
+					racaPersonagem = new RacaPersonagem(anaoMontanha.getNome(), anaoMontanha.getForca(),
+							anaoMontanha.getDestreza(), anaoMontanha.getInteligencia(), anaoMontanha.getSabedoria(),
+							anaoMontanha.getConstituicao(), anaoMontanha.getCarisma());
 				}
 			} else if (escolha == 2) {
 				System.out.printf(draconato.toString());
@@ -120,9 +120,9 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					racaPersonagem = new RacaPersonagem(draconato.getNome(),draconato.getForca(), draconato.getDestreza(),
-							draconato.getInteligencia(), draconato.getSabedoria(), draconato.getConstituicao(),
-							draconato.getCarisma());
+					racaPersonagem = new RacaPersonagem(draconato.getNome(), draconato.getForca(),
+							draconato.getDestreza(), draconato.getInteligencia(), draconato.getSabedoria(),
+							draconato.getConstituicao(), draconato.getCarisma());
 				}
 			} else if (escolha == 3) {
 				System.out.printf(elfo.toString());
@@ -150,13 +150,13 @@ public class Program {
 							elfoAlto.getInteligencia(), elfoAlto.getSabedoria(), elfoAlto.getConstituicao(),
 							elfoAlto.getCarisma());
 				} else if (escolha == 2) {
-					racaPersonagem = new RacaPersonagem(elfoFloresta.getNome(), elfoFloresta.getForca(), elfoFloresta.getDestreza(),
-							elfoFloresta.getInteligencia(), elfoFloresta.getSabedoria(), elfoFloresta.getConstituicao(),
-							elfoFloresta.getCarisma());
+					racaPersonagem = new RacaPersonagem(elfoFloresta.getNome(), elfoFloresta.getForca(),
+							elfoFloresta.getDestreza(), elfoFloresta.getInteligencia(), elfoFloresta.getSabedoria(),
+							elfoFloresta.getConstituicao(), elfoFloresta.getCarisma());
 				} else if (escolha == 3) {
-					racaPersonagem = new RacaPersonagem(elfoNegro.getNome(), elfoNegro.getForca(), elfoNegro.getDestreza(),
-							elfoNegro.getInteligencia(), elfoNegro.getSabedoria(), elfoNegro.getConstituicao(),
-							elfoNegro.getCarisma());
+					racaPersonagem = new RacaPersonagem(elfoNegro.getNome(), elfoNegro.getForca(),
+							elfoNegro.getDestreza(), elfoNegro.getInteligencia(), elfoNegro.getSabedoria(),
+							elfoNegro.getConstituicao(), elfoNegro.getCarisma());
 				}
 			} else if (escolha == 4) {
 				System.out.printf(gnomo.toString());
@@ -175,13 +175,13 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					racaPersonagem = new RacaPersonagem(gnomoFloresta.getNome(), gnomoFloresta.getForca(), gnomoFloresta.getDestreza(),
-							gnomoFloresta.getInteligencia(), gnomoFloresta.getSabedoria(),
+					racaPersonagem = new RacaPersonagem(gnomoFloresta.getNome(), gnomoFloresta.getForca(),
+							gnomoFloresta.getDestreza(), gnomoFloresta.getInteligencia(), gnomoFloresta.getSabedoria(),
 							gnomoFloresta.getConstituicao(), gnomoFloresta.getCarisma());
 				} else if (escolha == 2) {
-					racaPersonagem = new RacaPersonagem(gnomoPedra.getNome(), gnomoPedra.getForca(), gnomoPedra.getDestreza(),
-							gnomoPedra.getInteligencia(), gnomoPedra.getSabedoria(), gnomoPedra.getConstituicao(),
-							gnomoPedra.getCarisma());
+					racaPersonagem = new RacaPersonagem(gnomoPedra.getNome(), gnomoPedra.getForca(),
+							gnomoPedra.getDestreza(), gnomoPedra.getInteligencia(), gnomoPedra.getSabedoria(),
+							gnomoPedra.getConstituicao(), gnomoPedra.getCarisma());
 				}
 			} else if (escolha == 5) {
 				System.out.printf(halfling.toString());
@@ -200,13 +200,14 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					racaPersonagem = new RacaPersonagem(halflingLeve.getNome(), halflingLeve.getForca(), halflingLeve.getDestreza(),
-							halflingLeve.getInteligencia(), halflingLeve.getSabedoria(), halflingLeve.getConstituicao(),
-							halflingLeve.getCarisma());
+					racaPersonagem = new RacaPersonagem(halflingLeve.getNome(), halflingLeve.getForca(),
+							halflingLeve.getDestreza(), halflingLeve.getInteligencia(), halflingLeve.getSabedoria(),
+							halflingLeve.getConstituicao(), halflingLeve.getCarisma());
 				} else if (escolha == 2) {
-					racaPersonagem = new RacaPersonagem(halflingRobusto.getNome(), halflingRobusto.getForca(), halflingRobusto.getDestreza(),
-							halflingRobusto.getInteligencia(), halflingRobusto.getSabedoria(),
-							halflingRobusto.getConstituicao(), halflingRobusto.getCarisma());
+					racaPersonagem = new RacaPersonagem(halflingRobusto.getNome(), halflingRobusto.getForca(),
+							halflingRobusto.getDestreza(), halflingRobusto.getInteligencia(),
+							halflingRobusto.getSabedoria(), halflingRobusto.getConstituicao(),
+							halflingRobusto.getCarisma());
 				}
 			} else if (escolha == 6) {
 				System.out.printf(humano.toString());
@@ -223,8 +224,10 @@ public class Program {
 				}
 			}
 		} while (escolha == 0);
-		
+
 		Tracos();
+
+		// ESCOLHA DOS ATRIBUTOS
 
 		System.out.print("Informe a força: ");
 		int forca = sc.nextInt();
@@ -239,9 +242,11 @@ public class Program {
 		System.out.print("Informe o carisma: ");
 		int carisma = sc.nextInt();
 
+		// ESCOLHA DA CLASSE
+
 		do {
 			Tracos();
-			
+
 			EscolhasClasses();
 
 			Tracos();
@@ -257,7 +262,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(barbaro.getVida(), barbaro.getNome());
+					classePersonagem = new ClassePersonagem(barbaro.getVida(), barbaro.getNome(), barbaro.getVidaLvl());
 				}
 			} else if (escolha == 2) {
 				System.out.printf(bardo.toString());
@@ -268,7 +273,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(bardo.getVida(), bardo.getNome());
+					classePersonagem = new ClassePersonagem(bardo.getVida(), bardo.getNome(), bardo.getVidaLvl());
 				}
 			} else if (escolha == 3) {
 				System.out.printf(bruxo.toString());
@@ -279,7 +284,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(bruxo.getVida(), bruxo.getNome());
+					classePersonagem = new ClassePersonagem(bruxo.getVida(), bruxo.getNome(), bruxo.getVidaLvl());
 				}
 			} else if (escolha == 4) {
 				System.out.printf(clerigo.toString());
@@ -290,7 +295,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(clerigo.getVida(), clerigo.getNome());
+					classePersonagem = new ClassePersonagem(clerigo.getVida(), clerigo.getNome(), clerigo.getVidaLvl());
 				}
 			} else if (escolha == 5) {
 				System.out.printf(druida.toString());
@@ -301,7 +306,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(druida.getVida(), druida.getNome());
+					classePersonagem = new ClassePersonagem(druida.getVida(), druida.getNome(), druida.getVidaLvl());
 				}
 			} else if (escolha == 6) {
 				System.out.printf(feiticeiro.toString());
@@ -312,7 +317,8 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(feiticeiro.getVida(), feiticeiro.getNome());
+					classePersonagem = new ClassePersonagem(feiticeiro.getVida(), feiticeiro.getNome(),
+							feiticeiro.getVidaLvl());
 				}
 			} else if (escolha == 7) {
 				System.out.printf(guerreiro.toString());
@@ -323,7 +329,8 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(guerreiro.getVida(), guerreiro.getNome());
+					classePersonagem = new ClassePersonagem(guerreiro.getVida(), guerreiro.getNome(),
+							guerreiro.getVidaLvl());
 				}
 			} else if (escolha == 8) {
 				System.out.printf(ladino.toString());
@@ -334,7 +341,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(ladino.getVida(), ladino.getNome());
+					classePersonagem = new ClassePersonagem(ladino.getVida(), ladino.getNome(), ladino.getVidaLvl());
 				}
 			} else if (escolha == 9) {
 				System.out.printf(mago.toString());
@@ -345,7 +352,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(mago.getVida(), mago.getNome());
+					classePersonagem = new ClassePersonagem(mago.getVida(), mago.getNome(), mago.getVidaLvl());
 				}
 			} else if (escolha == 10) {
 				System.out.printf(monge.toString());
@@ -356,7 +363,7 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(monge.getVida(), monge.getNome());
+					classePersonagem = new ClassePersonagem(monge.getVida(), monge.getNome(), monge.getVidaLvl());
 				}
 			} else if (escolha == 11) {
 				System.out.printf(paladino.toString());
@@ -367,7 +374,8 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(paladino.getVida(), paladino.getNome());
+					classePersonagem = new ClassePersonagem(paladino.getVida(), paladino.getNome(),
+							paladino.getVidaLvl());
 				}
 			} else if (escolha == 12) {
 				System.out.printf(patrulheiro.toString());
@@ -378,7 +386,8 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					classePersonagem = new ClassePersonagem(patrulheiro.getVida(), patrulheiro.getNome());
+					classePersonagem = new ClassePersonagem(patrulheiro.getVida(), patrulheiro.getNome(),
+							patrulheiro.getVidaLvl());
 				}
 			}
 
@@ -386,29 +395,42 @@ public class Program {
 
 		Tracos();
 
-		personagem = new Personagem(racaPersonagem.getNome(), forca + racaPersonagem.getForca(), destreza + racaPersonagem.getDestreza(),
+		// CRIAÇÃO DOS PERSONAGEM APOS TER TODAS AS INFORMAÇÕES
+		personagem = new Personagem(forca + racaPersonagem.getForca(), destreza + racaPersonagem.getDestreza(),
 				inteligencia + racaPersonagem.getInteligencia(), sabedoria + racaPersonagem.getSabedoria(),
 				constituicao + racaPersonagem.getConstituicao(), carisma + racaPersonagem.getCarisma());
+
+		// OBJETOS QUE IRAM FICAR DENTRO DO PERSONAGEM
+		personagem.raca(racaPersonagem);
+		personagem.classe(classePersonagem);
 		Modificador modificador = new Modificador(personagem);
 		personagem.modificador(modificador);
-		
-		System.out.printf(
-				"ESCOLHA UMA OPCÇÃO%n1-HP manual (girado com dados fisico)%n2-HP aleatorio (girado com dados virtuais)%n");
+
+		// DEFINIÇÃO DO HP
+
+		VidaDados();
 		escolha = sc.nextByte();
 		if (escolha == 1) {
 			int hp = sc.nextInt();
+
+			while (hp > classePersonagem.getVidaLvl()) {
+				System.out.println("Informe um número dentro do limite de sua classe!");
+				System.out.println("1D" + classePersonagem.getVidaLvl());
+				hp = sc.nextInt();
+			}
 			personagem.hpManual(hp);
 		} else if (escolha == 2) {
-			personagem.hpAleatorio(classePersonagem.getVida(), modificador.getConstituicao());
+			personagem.hpAleatorio(classePersonagem.getVida());
 		}
-		
+
 		Tracos();
+
+		// NOME DO PERSONAGEM
 
 		System.out.print("Informe o nome do personagem: ");
 		sc.nextLine();
 		String nome = sc.nextLine();
 		personagem.setNome(nome);
-		personagem.setClasse(classePersonagem.getNome());
 
 		Tracos();
 
@@ -416,9 +438,6 @@ public class Program {
 
 		sc.close();
 	}
-	
-	
-	
 
 	public static void Tracos() {
 		System.out.printf("%n-----------------------------------------%n%n");
@@ -455,5 +474,10 @@ public class Program {
 	public static void EscolhasClasses() {
 		System.out.printf(
 				"1-Barbaro%n2-Bardo%n3-Bruxo%n4-Clerigo%n5-Druida%n6-Feiticeiro%n7-Guerreiro%n8-Ladino%n9-Mago%n10-Monge%n11-Paladino%n12-Patrulheiro%n");
+	}
+
+	public static void VidaDados() {
+		System.out.printf(
+				"ESCOLHA UMA OPCÇÃO%n1-HP manual (girado com dados fisico)%n2-HP aleatorio (girado com dados virtuais)%n");
 	}
 }

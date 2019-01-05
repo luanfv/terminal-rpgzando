@@ -2,12 +2,11 @@ package classes;
 
 import java.util.Random;
 
-import informações.Modificador;
-
 public class Guerreiro {
 	
 
 	private int vida;
+	private int vidaLvl = 10;
 	private String nome = "Guerreiro";
 	
 	public Guerreiro() {
@@ -19,6 +18,10 @@ public class Guerreiro {
 			hp = aleatorio.nextInt(11);
 
 		this.vida = hp;
+	}
+	
+	public int getVidaLvl() {
+		return vidaLvl;
 	}
 
 	public int getVida() {

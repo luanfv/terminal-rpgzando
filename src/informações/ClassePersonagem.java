@@ -1,19 +1,23 @@
-package classes;
+package informações;
 
 public class ClassePersonagem {
 	
-	private int vida;
+	private int vida, vidaLvl;
 	private String nome;
 	
 	public ClassePersonagem() {
 		
 	}
 	
-	public ClassePersonagem(int vida, String nome) {
+	public ClassePersonagem(int vida, String nome, int vidaLvl) {
 		this.vida += vida;
 		this.nome = nome;
+		this.vidaLvl = vidaLvl;
 	}
 
+	public int getVidaLvl(){
+		return vidaLvl;
+	}
 
 	public int getVida() {
 		return vida;

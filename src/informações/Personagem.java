@@ -1,53 +1,35 @@
 package informações;
 
-import raça.RacaPersonagem;
 
 public class Personagem {
 	
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
-	private String nome, classe;
+	private String nome;
 	private Modificador mod;
-	private String nomeRaca;
+	private ClassePersonagem classe;
+	private RacaPersonagem raca;
 
 	public Personagem() {
 		
 	}
 	
-	public Personagem(String nomeRaca,int forca, int destreza, int inteligencia, int sabedoria, int constituicao, int carisma) {
+	public Personagem(int forca, int destreza, int inteligencia, int sabedoria, int constituicao, int carisma) {
 		
-		setNomeRaca(nomeRaca);
 		setForca(forca);
 		setDestreza(destreza);
 		setConstituicao(constituicao);
 		setInteligencia(inteligencia);
 		setSabedoria(sabedoria);
 		setCarisma(carisma);
-	}
-	
-	
-	
-	public String getNomeRaca() {
-		return nomeRaca;
-	}
-
-	public void setNomeRaca(String nomeRaca) {
-		this.nomeRaca = nomeRaca;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getClasse() {
-		return classe;
-	}
-
-	public void setClasse(String classe) {
-		this.classe = classe;
+		setHp(0);
 	}
 
 	public String getNome() {
 		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 	public int getHp() {
@@ -107,23 +89,34 @@ public class Personagem {
 	}
 	
 	public void hpManual(int hp) {
-		this.hp = hp;
+		setHp(getHp() + hp + mod.getConstituicao());
+		System.out.printf("TOTAL: " + getHp() + "%nDado: " + hp + "%nModificador: " + mod.getConstituicao() + "%n");
 	}
 	
-	public void hpAleatorio(int vida, int vidaModificador) {
-		this.hp = getHp() + vida + vidaModificador;
-		System.out.printf("TOTAL: " + getHp() + "%nDado: " + vida + "%nModificador: " + vidaModificador + "%n");
+	public void hpAleatorio(int vida) {
+		setHp(getHp() + vida + mod.getConstituicao());
+		System.out.printf("TOTAL: " + getHp() + "%nDado: " + vida + "%nModificador: " + mod.getConstituicao() + "%n");
 	}
 
 	public void modificador(Modificador mod) {
 		this.mod = mod;
+	}
+	
+	public void raca(RacaPersonagem raca) {
+		this.raca = raca;
+	}
+	
+	public void classe(ClassePersonagem classe) {
+		this.classe = classe;
 	}
 
 	public String toString() {
 		return "Nome: "
 				+ getNome()
 				+ "%nRaça: "
-				+ getNomeRaca()
+				+ raca.getNome()
+				+ "%nClasse: "
+				+ classe.getNome()
 				+ "%nHP: "
 				+ getHp()
 				+ "%nForça: "
@@ -149,9 +142,7 @@ public class Personagem {
 				+ "%nCarisma: "
 				+ getCarisma()
 				+ " +"
-				+ mod.getCarisma()
-				+ "%nClasse: "
-				+ getClasse();
+				+ mod.getCarisma();
 	}
 
 }

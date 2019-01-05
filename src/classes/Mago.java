@@ -2,11 +2,10 @@ package classes;
 
 import java.util.Random;
 
-import informações.Modificador;
-
 public class Mago {
 
 	private int vida;
+	private int vidaLvl = 6;
 	private String nome = "Mago";
 	
 	public Mago() {
@@ -20,6 +19,10 @@ public class Mago {
 		this.vida = hp;
 	}
 
+	public int getVidaLvl() {
+		return vidaLvl;
+	}
+	
 	public int getVida() {
 		return vida;
 	}

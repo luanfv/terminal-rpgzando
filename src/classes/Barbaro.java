@@ -5,6 +5,7 @@ import java.util.Random;
 public class Barbaro {
 	
 	private int vida;
+	private int vidaLvl = 12;
 	private String nome = "Barbaro";
 	
 	public Barbaro() {
@@ -18,6 +19,10 @@ public class Barbaro {
 		this.vida = hp;
 	}
 
+	public int getVidaLvl() {
+		return vidaLvl;
+	}
+	
 	public int getVida() {
 		return vida;
 	}

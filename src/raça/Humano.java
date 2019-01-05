@@ -17,12 +17,8 @@ public class Humano {
 		this.carisma = 1;
 	}
 
-	public String getNome() {
+	public String getNome(){
 		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public int getForca() {
@@ -45,17 +41,13 @@ public class Humano {
 		return constituicao;
 	}
 
-
 	public int getCarisma() {
 		return carisma;
 	}
 
-		
 	public String toString() {
 		return "Humano%nFOR: +" + getForca() + "%nDES: +" + getDestreza() + "%nCON: +" + getConstituicao() + "%nINT: +" + getInteligencia() + "%nSAB: +" + getSabedoria() + "%nCAR: +" + getCarisma();
 	}
-		
-
 
 }
 

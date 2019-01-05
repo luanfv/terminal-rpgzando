@@ -1,4 +1,4 @@
-package raça;
+package informações;
 
 public class RacaPersonagem {
 	
