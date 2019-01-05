@@ -3,9 +3,10 @@ package raça;
 public class Anao {
 	
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+	String nome;
 	
 	public Anao() {
-
+		
 		this.hp = 0;
 		this.forca = 0;
 		this.destreza = 0;

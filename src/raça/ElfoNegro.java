@@ -4,7 +4,7 @@ public class ElfoNegro {
 	
 	Elfo elfo = new Elfo();
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
-	
+	private String nome = "Elfo Negro";
 	
 	public ElfoNegro() {
 
@@ -15,6 +15,14 @@ public class ElfoNegro {
 		this.sabedoria = 0 + elfo.getSabedoria();
 		this.constituicao = 0 + elfo.getConstituicao();
 		this.carisma = 1 + elfo.getCarisma();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getHp() {

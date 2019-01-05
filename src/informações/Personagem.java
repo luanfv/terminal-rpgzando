@@ -1,26 +1,49 @@
 package informações;
 
-import classes.ClassePersonagem;
+import raça.RacaPersonagem;
 
 public class Personagem {
 	
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
-	private String nome;
+	private String nome, classe;
+	private Modificador mod;
+	private String nomeRaca;
 
 	public Personagem() {
 		
 	}
 	
-	public Personagem(int forca, int destreza, int inteligencia, int sabedoria, int constituicao, int carisma,
-			String nome) {
+	public Personagem(String nomeRaca,int forca, int destreza, int inteligencia, int sabedoria, int constituicao, int carisma) {
 		
-		this.forca = forca;
-		this.destreza = destreza;
-		this.inteligencia = inteligencia;
-		this.sabedoria = sabedoria;
-		this.constituicao = constituicao;
-		this.carisma = carisma;
+		setNomeRaca(nomeRaca);
+		setForca(forca);
+		setDestreza(destreza);
+		setConstituicao(constituicao);
+		setInteligencia(inteligencia);
+		setSabedoria(sabedoria);
+		setCarisma(carisma);
+	}
+	
+	
+	
+	public String getNomeRaca() {
+		return nomeRaca;
+	}
+
+	public void setNomeRaca(String nomeRaca) {
+		this.nomeRaca = nomeRaca;
+	}
+
+	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getClasse() {
+		return classe;
+	}
+
+	public void setClasse(String classe) {
+		this.classe = classe;
 	}
 
 	public String getNome() {
@@ -87,11 +110,48 @@ public class Personagem {
 		this.hp = hp;
 	}
 	
-	public void hpAleatorio() {
-		ClassePersonagem classe = new ClassePersonagem();
-		this.hp = classe.getVida();
+	public void hpAleatorio(int vida, int vidaModificador) {
+		this.hp = getHp() + vida + vidaModificador;
+		System.out.printf("TOTAL: " + getHp() + "%nDado: " + vida + "%nModificador: " + vidaModificador + "%n");
 	}
 
-	
+	public void modificador(Modificador mod) {
+		this.mod = mod;
+	}
+
+	public String toString() {
+		return "Nome: "
+				+ getNome()
+				+ "%nRaça: "
+				+ getNomeRaca()
+				+ "%nHP: "
+				+ getHp()
+				+ "%nForça: "
+				+ getForca()
+				+ " +"
+				+ mod.getForca()
+				+ "%nDestreza: "
+				+ getDestreza()
+				+ " +"
+				+ mod.getDestreza()
+				+ "%nConstituição: "
+				+ getConstituicao()
+				+ " +"
+				+ mod.getConstituicao()
+				+ "%nInteligencia: "
+				+ getInteligencia()
+				+ " +"
+				+ mod.getInteligencia()
+				+ "%nSabedoria: "
+				+ getSabedoria()
+				+ " +"
+				+ mod.getSabedoria()
+				+ "%nCarisma: "
+				+ getCarisma()
+				+ " +"
+				+ mod.getCarisma()
+				+ "%nClasse: "
+				+ getClasse();
+	}
 
 }

@@ -1,11 +1,10 @@
 package informações;
 
 public class Modificador {
-	
-	Personagem personagem = new Personagem();
+
 	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma;
 	
-	public Modificador() {
+	public Modificador(Personagem personagem) {
 		
 		if(personagem.getForca() == 1) 
 			this.forca = -5;

@@ -4,8 +4,7 @@ public class HalflingLeve {
 	
 	Halfling halfling = new Halfling();
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
-	
-	
+	private String nome = "Halfling Pés Leves";
 	
 	public HalflingLeve() {
 
@@ -16,6 +15,14 @@ public class HalflingLeve {
 		this.sabedoria = 0 + halfling.getSabedoria();
 		this.constituicao = 0 + halfling.getConstituicao();
 		this.carisma = 1 + halfling.getCarisma();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getHp() {

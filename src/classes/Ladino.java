@@ -6,22 +6,35 @@ import informações.Modificador;
 
 public class Ladino {
 	
-	Modificador mod = new Modificador();
 	private int vida;
+	private String nome = "Ladino";
 	
 	public Ladino() {
 		Random aleatorio = new Random();
 		int hp;
-		hp = aleatorio.nextInt(8);
+		hp = aleatorio.nextInt(9);
 		
-		while(hp == 0) 
-			hp = aleatorio.nextInt(8);
+		while(hp < 1)  
+			hp = aleatorio.nextInt(9);
 
-		this.vida = hp + mod.getConstituicao();
+		this.vida = hp;
 	}
 
 	public int getVida() {
 		return vida;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String toString() {
+		return "Classe: "
+				+ getNome()
+				+ "%nHP: 1D8%n";
+	}
 }

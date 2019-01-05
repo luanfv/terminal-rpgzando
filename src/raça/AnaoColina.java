@@ -3,9 +3,9 @@ package raça;
 public class AnaoColina {
 	
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+	private String nome = "Anão da Colina";
 	Anao anao = new Anao();
-	
-	
+
 	public AnaoColina() {
 
 		this.hp += 0 + anao.getHp();
@@ -15,6 +15,14 @@ public class AnaoColina {
 		this.sabedoria += 1 + anao.getSabedoria();
 		this.constituicao += 0 + anao.getConstituicao();
 		this.carisma += 0 + anao.getCarisma();
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getHp() {

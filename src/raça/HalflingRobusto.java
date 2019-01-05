@@ -4,7 +4,7 @@ public class HalflingRobusto {
 	
 	Halfling halfling = new Halfling();
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
-	
+	private String nome = "Halfling Robusto";
 	
 	
 	public HalflingRobusto() {
@@ -16,6 +16,14 @@ public class HalflingRobusto {
 		this.sabedoria = 0 + halfling.getSabedoria();
 		this.constituicao = 1 + halfling.getConstituicao();
 		this.carisma = 0 + halfling.getCarisma();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getHp() {

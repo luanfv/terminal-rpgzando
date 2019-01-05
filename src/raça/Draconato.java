@@ -2,8 +2,8 @@ package raça;
 
 public class Draconato {
 	
-private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
-
+	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+	private String nome = "Draconato";
 	
 	public Draconato() {
 	
@@ -14,6 +14,14 @@ private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
 		this.sabedoria = 0;
 		this.constituicao = 0;
 		this.carisma = 1;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getHp() {

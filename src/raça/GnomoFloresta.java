@@ -3,6 +3,7 @@ package raça;
 public class GnomoFloresta {
 
 	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+	private String nome = "Gnomo da Floresta";
 	Gnomo gnomo = new Gnomo();
 	
 	
@@ -15,6 +16,14 @@ public class GnomoFloresta {
 		this.sabedoria += 0 + gnomo.getSabedoria();
 		this.constituicao += 0 + gnomo.getConstituicao();
 		this.carisma += 0 + gnomo.getCarisma();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getHp() {
