@@ -74,6 +74,9 @@ public class Program {
 		RacaPersonagem racaPersonagem = new RacaPersonagem();
 
 		byte escolha;
+		
+		System.out.print("Informe o nivel do seu personagem: ");
+		int nivel = sc.nextByte();
 
 		// ESCOLHA DE RAÇA
 		do {
@@ -396,7 +399,7 @@ public class Program {
 		Tracos();
 
 		// CRIAÇÃO DOS PERSONAGEM APOS TER TODAS AS INFORMAÇÕES
-		personagem = new Personagem(forca + racaPersonagem.getForca(), destreza + racaPersonagem.getDestreza(),
+		personagem = new Personagem(nivel, forca + racaPersonagem.getForca(), destreza + racaPersonagem.getDestreza(),
 				inteligencia + racaPersonagem.getInteligencia(), sabedoria + racaPersonagem.getSabedoria(),
 				constituicao + racaPersonagem.getConstituicao(), carisma + racaPersonagem.getCarisma());
 
@@ -410,17 +413,19 @@ public class Program {
 
 		VidaDados();
 		escolha = sc.nextByte();
-		if (escolha == 1) {
-			int hp = sc.nextInt();
-
-			while (hp > classePersonagem.getVidaLvl()) {
-				System.out.println("Informe um número dentro do limite de sua classe!");
-				System.out.println("1D" + classePersonagem.getVidaLvl());
-				hp = sc.nextInt();
+		for(int i = 0; i < personagem.getNivel(); i++) {
+			if (escolha == 1) {
+				int hp = sc.nextInt();
+	
+				while (hp > classePersonagem.getVidaLvl()) {
+					System.out.println("Informe um número dentro do limite de sua classe!");
+					System.out.println("1D" + classePersonagem.getVidaLvl());
+					hp = sc.nextInt();
+				}
+				personagem.hpManual(hp);
+			} else if (escolha == 2) {
+				personagem.hpAleatorio(classePersonagem.getVida());
 			}
-			personagem.hpManual(hp);
-		} else if (escolha == 2) {
-			personagem.hpAleatorio(classePersonagem.getVida());
 		}
 
 		Tracos();

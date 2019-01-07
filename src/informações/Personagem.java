@@ -3,7 +3,7 @@ package informações;
 
 public class Personagem {
 	
-	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+	private int hp, forca, destreza, inteligencia, sabedoria, constituicao, carisma, nivel;
 	private String nome;
 	private Modificador mod;
 	private ClassePersonagem classe;
@@ -13,8 +13,9 @@ public class Personagem {
 		
 	}
 	
-	public Personagem(int forca, int destreza, int inteligencia, int sabedoria, int constituicao, int carisma) {
+	public Personagem(int nivel, int forca, int destreza, int inteligencia, int sabedoria, int constituicao, int carisma) {
 		
+		setNivel(nivel);
 		setForca(forca);
 		setDestreza(destreza);
 		setConstituicao(constituicao);
@@ -22,6 +23,14 @@ public class Personagem {
 		setSabedoria(sabedoria);
 		setCarisma(carisma);
 		setHp(0);
+	}
+
+	public int getNivel() {
+		return nivel;
+	}
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
 	}
 
 	public String getNome() {
@@ -89,12 +98,12 @@ public class Personagem {
 	}
 	
 	public void hpManual(int hp) {
-		setHp(getHp() + hp + mod.getConstituicao());
+		setHp(hp + mod.getConstituicao());
 		System.out.printf("TOTAL: " + getHp() + "%nDado: " + hp + "%nModificador: " + mod.getConstituicao() + "%n");
 	}
 	
 	public void hpAleatorio(int vida) {
-		setHp(getHp() + vida + mod.getConstituicao());
+		setHp(vida + mod.getConstituicao());
 		System.out.printf("TOTAL: " + getHp() + "%nDado: " + vida + "%nModificador: " + mod.getConstituicao() + "%n");
 	}
 
@@ -113,6 +122,8 @@ public class Personagem {
 	public String toString() {
 		return "Nome: "
 				+ getNome()
+				+ "%nNivel: "
+				+ getNivel()
 				+ "%nRaça: "
 				+ raca.getNome()
 				+ "%nClasse: "

@@ -1,6 +1,6 @@
 package classes;
 
-import java.util.Random;
+import dados.D6;
 
 public class Feiticeiro {
 
@@ -9,14 +9,9 @@ public class Feiticeiro {
 	private String nome = "Feiticeiro";
 	
 	public Feiticeiro() {
-		Random aleatorio = new Random();
-		int hp;
-		hp = aleatorio.nextInt(7);
+		D6 dado = new D6();
 		
-		while(hp < 1) 
-			hp = aleatorio.nextInt(7);
-
-		this.vida = hp;
+		this.vida = dado.getD6();
 	}
 	
 	public int getVidaLvl() {

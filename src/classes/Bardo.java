@@ -1,6 +1,6 @@
 package classes;
 
-import java.util.Random;
+import dados.D8;
 
 public class Bardo {
 	
@@ -9,14 +9,9 @@ public class Bardo {
 	private String nome = "Bardo";
 	
 	public Bardo() {
-		Random aleatorio = new Random();
-		int hp;
-		hp = aleatorio.nextInt(9);
-		
-		while(hp < 1) 
-			hp = aleatorio.nextInt(9);
+		D8 dado = new D8();
 
-		this.vida = hp;
+		this.vida = dado.getD8();
 	}
 	
 	public int getVidaLvl() {

@@ -1,6 +1,6 @@
 package classes;
 
-import java.util.Random;
+import dados.D12;
 
 public class Barbaro {
 	
@@ -9,14 +9,9 @@ public class Barbaro {
 	private String nome = "Barbaro";
 	
 	public Barbaro() {
-		Random aleatorio = new Random();
-		int hp;
-		hp = aleatorio.nextInt(13);
+		D12 dado = new D12();
 		
-		while(hp < 1) 
-			hp = aleatorio.nextInt(13);
-
-		this.vida = hp;
+		this.vida = dado.getD12();
 	}
 
 	public int getVidaLvl() {
