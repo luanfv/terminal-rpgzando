@@ -1,6 +1,5 @@
 package classes;
 
-import dados.D10;
 
 public class Guerreiro {
 	
@@ -8,11 +7,8 @@ public class Guerreiro {
 	private int vida;
 	private int vidaLvl = 10;
 	private String nome = "Guerreiro";
-	
+
 	public Guerreiro() {
-		D10 dado = new D10();
-		
-		this.vida = dado.getD10();
 	}
 	
 	public int getVidaLvl() {

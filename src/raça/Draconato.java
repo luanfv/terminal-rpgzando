@@ -1,50 +1,24 @@
 package raça;
 
-public class Draconato {
-	
-	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+public class Draconato extends Raca {
+
 	private String nome = "Draconato";
 	
-	public Draconato() {
-	
-		this.forca = 2;
-		this.destreza = 0;
-		this.inteligencia = 0;
-		this.sabedoria = 0;
-		this.constituicao = 0;
-		this.carisma = 1;
+	public void addDraconato() {
+		setForca(getForca() + 2);
+		setCarisma(getCarisma() + 1);
 	}
 
-	public String getNome(){
+	public String getNome() {
 		return nome;
 	}
 
-	public int getForca() {
-		return forca;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public int getDestreza() {
-		return destreza;
-	}
-
-	public int getInteligencia() {
-		return inteligencia;
-	}
-
-	public int getSabedoria() {
-		return sabedoria;
-	}
-
-	public int getConstituicao() {
-		return constituicao;
-	}
-
-	public int getCarisma() {
-		return carisma;
-	}
-	
 	public String toString() {
-		return "Draconato%nFOR: +" + getForca() + "%nCAR: +" + getCarisma();
+		return getNome() + "%nFOR: +" + (getForca() + 2) + "%nCAR: +" + (getCarisma() + 1);
 	}
 
 }

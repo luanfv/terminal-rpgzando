@@ -1,17 +1,13 @@
 package classes;
 
-import dados.D8;
 
 public class Bruxo {
 	
 	private int vida;
 	private int vidaLvl = 8;
 	private String nome = "Bruxo";
-	
+
 	public Bruxo() {
-		D8 dado = new D8();
-		
-		this.vida = dado.getD8();
 	}
 	
 	public int getVidaLvl() {

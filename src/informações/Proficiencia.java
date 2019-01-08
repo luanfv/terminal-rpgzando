@@ -1,44 +1,28 @@
 package informações;
 
-public class Proficiencia {
+public class Proficiencia extends Modificador {
 	
 	private int proficiencia;
-	private String classe;
-	private Personagem personagem;
-	
-	public int getProficiencia() {
-		return proficiencia;
-	}
-
-	private void setProficiencia(int proficiencia) {
-		this.proficiencia = proficiencia;
-	}
-	
-	public String getClasse() {
-		return classe;
-	}
-	
-	public void setClasse(String classe) {
-		this.classe = classe;
-	}
-	
-	public Proficiencia(Personagem personagem) {
-		this.personagem = personagem;
-	}
 	
 	public void proficienciaClasseLvl() {
-		if(personagem.getNivel() < 5)
+		if(getNivel() < 5)
 			setProficiencia(2);
-		else if(personagem.getNivel() < 9)
+		else if(getNivel() < 9)
 			setProficiencia(3);
-		else if(personagem.getNivel() < 13)
+		else if(getNivel() < 13)
 			setProficiencia(4);
-		else if(personagem.getNivel() < 17)
+		else if(getNivel() < 17)
 			setProficiencia(5);
 		else 
 			setProficiencia(6);	
 	}
-	
-	
+
+	public int getProficiencia() {
+		return proficiencia;
+	}
+
+	public void setProficiencia(int proficiencia) {
+		this.proficiencia = proficiencia;
+	}
 
 }

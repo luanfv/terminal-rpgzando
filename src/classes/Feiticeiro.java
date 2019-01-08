@@ -1,17 +1,13 @@
 package classes;
 
-import dados.D6;
 
 public class Feiticeiro {
 
 	private int vida;
 	private int vidaLvl = 6;
 	private String nome = "Feiticeiro";
-	
+
 	public Feiticeiro() {
-		D6 dado = new D6();
-		
-		this.vida = dado.getD6();
 	}
 	
 	public int getVidaLvl() {

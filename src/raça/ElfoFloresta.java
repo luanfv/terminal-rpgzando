@@ -1,51 +1,24 @@
 package raça;
 
-public class ElfoFloresta {
+public class ElfoFloresta extends Elfo {
 	
-	Elfo elfo = new Elfo();
-	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma;
 	private String nome = "Elfo da Floresta";
 	
-	public ElfoFloresta() {
-
-		this.forca = 0 + elfo.getForca();
-		this.destreza = 0 + elfo.getDestreza();
-		this.inteligencia = 0 + elfo.getInteligencia();
-		this.sabedoria = 1 + elfo.getSabedoria();
-		this.constituicao = 0 + elfo.getConstituicao();
-		this.carisma = 0 + elfo.getCarisma();
-	}
-
-	public String getNome(){
+	public String getNome() {
 		return nome;
 	}
 
-	public int getForca() {
-		return forca;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public int getDestreza() {
-		return destreza;
-	}
-
-	public int getInteligencia() {
-		return inteligencia;
-	}
-
-	public int getSabedoria() {
-		return sabedoria;
-	}
-
-	public int getConstituicao() {
-		return constituicao;
-	}
-
-	public int getCarisma() {
-		return carisma;
+	public void addElfoFloresta() {
+		addElfo();
+		setSabedoria(getSabedoria() + 1);
 	}
 	
 	public String toString() {
-		return "%nElfo da Floresta%nSAB: +" + getSabedoria();
+		return getNome() + "%nSAB: +" + (getSabedoria() + 1);
 	}
 
 }

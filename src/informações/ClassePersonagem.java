@@ -1,41 +1,51 @@
 package informações;
 
-public class ClassePersonagem {
+public class ClassePersonagem extends RacaPersonagem {
 	
-	private int vida, vidaLvl;
-	private String nome;
+	private int hp = 0, vidaLvl;
+	private String classeNome;
 	
-	public ClassePersonagem() {
-		
-	}
-	
-	public ClassePersonagem(int vida, String nome, int vidaLvl) {
-		this.vida += vida;
-		this.nome = nome;
+	public void addClasse(String nome, int vidaLvl) {
+		this.classeNome = nome;
 		this.vidaLvl = vidaLvl;
 	}
 
-	public int getVidaLvl(){
+
+	public int getHp() {
+		return hp;
+	}
+
+
+	public void setHp(int hp) {
+		this.hp += hp;
+	}
+
+
+	public int getVidaLvl() {
 		return vidaLvl;
 	}
 
-	public int getVida() {
-		return vida;
+
+	public void setVidaLvl(int vidaLvl) {
+		this.vidaLvl = vidaLvl;
 	}
 
-	public String getNome() {
-		return nome;
+
+	public String getClasseNome() {
+		return classeNome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setClasseNome(String classeNome) {
+		this.classeNome = classeNome;
 	}
 
+
+	@Override
 	public String toString() {
-		return "Classe: "
-				+ getNome()
-				+ "%nHP: "
-				+ getVida();
+		return "ClassePersonagem [hp=" + hp + ", vidaLvl=" + vidaLvl + ", classeNome=" + classeNome + "]";
 	}
+	
+	
 	
 }

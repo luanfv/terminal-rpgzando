@@ -1,52 +1,24 @@
 package raça;
 
-public class AnaoColina {
+public class AnaoColina extends Anao {
 	
-	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma;
 	private String nome = "Anão da Colina";
-	Anao anao = new Anao();
-
-	public AnaoColina() {
-
-		this.forca += 0 + anao.getForca();
-		this.destreza += 0 + anao.getDestreza();
-		this.inteligencia += 0 + anao.getInteligencia();
-		this.sabedoria += 1 + anao.getSabedoria();
-		this.constituicao += 0 + anao.getConstituicao();
-		this.carisma += 0 + anao.getCarisma();
-	}
 	
-	public String getNome(){
+	public String getNome() {
 		return nome;
 	}
 
-	public int getForca() {
-		return forca;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public int getDestreza() {
-		return destreza;
+	public void addAnaoColina() {
+		addAnao();
+		setSabedoria(getSabedoria() + 1);
 	}
 
-	public int getInteligencia() {
-		return inteligencia;
-	}
-
-	public int getSabedoria() {
-		return sabedoria;
-	}
-
-	public int getConstituicao() {
-		return constituicao;
-	}
-
-	public int getCarisma() {
-		return carisma;
-	}
-
-	
 	public String toString() {
-		return "%nAnão da Colina%nSAB: +" + getSabedoria();
+		return getNome() + "%nSAB: +" + (getSabedoria() + 1);
 	}
 
 }

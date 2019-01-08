@@ -1,174 +1,198 @@
 package informações;
 
-public class Modificador {
+public class Modificador extends TotalAtributos{
 
-	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma;
+	private int Mforca, Mdestreza, Mconstituicao, Minteligencia, Msabedoria, Mcarisma;
 	
-	public Modificador(Personagem personagem) {
+	public void addModificador() {
 		
-		if(personagem.getForca() == 1) 
-			this.forca = -5;
-		else if(personagem.getForca() <= 3)
-			this.forca = -4;
-		else if(personagem.getForca() <=5)
-			this.forca = -3;
-		else if(personagem.getForca() <= 7)
-			this.forca = -2;
-		else if(personagem.getForca() <= 9)
-			this.forca = -1;
-		else if(personagem.getForca() <= 11)
-			this.forca = 0;
-		else if(personagem.getForca() <= 13)
-			this.forca = 1;
-		else if(personagem.getForca() <= 15)
-			this.forca = 2;
-		else if(personagem.getForca() <= 17)
-			this.forca = 3;
-		else if(personagem.getForca() <= 19)
-			this.forca = 4;
-		else if(personagem.getForca() >=20)
-			this.forca = 5;
+		if(getForca() == 1) 
+			this.Mforca = -5;
+		else if(getForca() <= 3)
+			this.Mforca = -4;
+		else if(getForca() <=5)
+			this.Mforca = -3;
+		else if(getForca() <= 7)
+			this.Mforca = -2;
+		else if(getForca() <= 9)
+			this.Mforca = -1;
+		else if(getForca() <= 11)
+			this.Mforca = 0;
+		else if(getForca() <= 13)
+			this.Mforca = 1;
+		else if(getForca() <= 15)
+			this.Mforca = 2;
+		else if(getForca() <= 17)
+			this.Mforca = 3;
+		else if(getForca() <= 19)
+			this.Mforca = 4;
+		else if(getForca() >=20)
+			this.Mforca = 5;
 		
-		if(personagem.getConstituicao() == 1) 
-			this.constituicao = -5;
-		else if(personagem.getConstituicao() <= 3)
-			this.constituicao = -4;
-		else if(personagem.getConstituicao() <=5)
-			this.constituicao = -3;
-		else if(personagem.getConstituicao() <= 7)
-			this.constituicao = -2;
-		else if(personagem.getConstituicao() <= 9)
-			this.constituicao = -1;
-		else if(personagem.getConstituicao() <= 11)
-			this.constituicao = 0;
-		else if(personagem.getConstituicao() <= 13)
-			this.constituicao = 1;
-		else if(personagem.getConstituicao() <= 15)
-			this.constituicao = 2;
-		else if(personagem.getConstituicao() <= 17)
-			this.constituicao = 3;
-		else if(personagem.getConstituicao() <= 19)
-			this.constituicao = 4;
-		else if(personagem.getConstituicao() >=20)
-			this.constituicao = 5;
+		if(getConstituicao() == 1) 
+			this.Mconstituicao = -5;
+		else if(getConstituicao() <= 3)
+			this.Mconstituicao = -4;
+		else if(getConstituicao() <=5)
+			this.Mconstituicao = -3;
+		else if(getConstituicao() <= 7)
+			this.Mconstituicao = -2;
+		else if(getConstituicao() <= 9)
+			this.Mconstituicao = -1;
+		else if(getConstituicao() <= 11)
+			this.Mconstituicao = 0;
+		else if(getConstituicao() <= 13)
+			this.Mconstituicao = 1;
+		else if(getConstituicao() <= 15)
+			this.Mconstituicao = 2;
+		else if(getConstituicao() <= 17)
+			this.Mconstituicao = 3;
+		else if(getConstituicao() <= 19)
+			this.Mconstituicao = 4;
+		else if(getConstituicao() >=20)
+			this.Mconstituicao = 5;
 	
-		if(personagem.getDestreza() == 1) 
-			this.destreza = -5;
-		else if(personagem.getDestreza() <= 3)
-			this.destreza = -4;
-		else if(personagem.getDestreza() <=5)
-			this.destreza = -3;
-		else if(personagem.getDestreza() <= 7)
-			this.destreza = -2;
-		else if(personagem.getDestreza() <= 9)
-			this.destreza = -1;
-		else if(personagem.getDestreza() <= 11)
-			this.destreza = 0;
-		else if(personagem.getDestreza() <= 13)
-			this.destreza = 1;
-		else if(personagem.getDestreza() <= 15)
-			this.destreza = 2;
-		else if(personagem.getDestreza() <= 17)
-			this.destreza = 3;
-		else if(personagem.getDestreza() <= 19)
-			this.destreza = 4;
-		else if(personagem.getDestreza() >=20)
-			this.destreza = 5;
+		if(getDestreza() == 1) 
+			this.Mdestreza = -5;
+		else if(getDestreza() <= 3)
+			this.Mdestreza = -4;
+		else if(getDestreza() <=5)
+			this.Mdestreza = -3;
+		else if(getDestreza() <= 7)
+			this.Mdestreza = -2;
+		else if(getDestreza() <= 9)
+			this.Mdestreza = -1;
+		else if(getDestreza() <= 11)
+			this.Mdestreza = 0;
+		else if(getDestreza() <= 13)
+			this.Mdestreza = 1;
+		else if(getDestreza() <= 15)
+			this.Mdestreza = 2;
+		else if(getDestreza() <= 17)
+			this.Mdestreza = 3;
+		else if(getDestreza() <= 19)
+			this.Mdestreza = 4;
+		else if(getDestreza() >=20)
+			this.Mdestreza = 5;
 		
-		if(personagem.getSabedoria() == 1) 
-			this.sabedoria = -5;
-		else if(personagem.getSabedoria() <= 3)
-			this.sabedoria = -4;
-		else if(personagem.getSabedoria() <=5)
-			this.sabedoria = -3;
-		else if(personagem.getSabedoria() <= 7)
-			this.sabedoria = -2;
-		else if(personagem.getSabedoria() <= 9)
-			this.sabedoria = -1;
-		else if(personagem.getSabedoria() <= 11)
-			this.sabedoria = 0;
-		else if(personagem.getSabedoria() <= 13)
-			this.sabedoria = 1;
-		else if(personagem.getSabedoria() <= 15)
-			this.sabedoria = 2;
-		else if(personagem.getSabedoria() <= 17)
-			this.sabedoria = 3;
-		else if(personagem.getSabedoria() <= 19)
-			this.sabedoria = 4;
-		else if(personagem.getSabedoria() >=20)
-			this.sabedoria = 5;
+		if(getSabedoria() == 1) 
+			this.Msabedoria = -5;
+		else if(getSabedoria() <= 3)
+			this.Msabedoria = -4;
+		else if(getSabedoria() <=5)
+			this.Msabedoria = -3;
+		else if(getSabedoria() <= 7)
+			this.Msabedoria = -2;
+		else if(getSabedoria() <= 9)
+			this.Msabedoria = -1;
+		else if(getSabedoria() <= 11)
+			this.Msabedoria = 0;
+		else if(getSabedoria() <= 13)
+			this.Msabedoria = 1;
+		else if(getSabedoria() <= 15)
+			this.Msabedoria = 2;
+		else if(getSabedoria() <= 17)
+			this.Msabedoria = 3;
+		else if(getSabedoria() <= 19)
+			this.Msabedoria = 4;
+		else if(getSabedoria() >=20)
+			this.Msabedoria = 5;
 		
-		if(personagem.getInteligencia() == 1) 
-			this.inteligencia = -5;
-		else if(personagem.getInteligencia() <= 3)
-			this.inteligencia = -4;
-		else if(personagem.getInteligencia() <=5)
-			this.inteligencia = -3;
-		else if(personagem.getInteligencia() <= 7)
-			this.inteligencia = -2;
-		else if(personagem.getInteligencia() <= 9)
-			this.inteligencia = -1;
-		else if(personagem.getInteligencia() <= 11)
-			this.inteligencia = 0;
-		else if(personagem.getInteligencia() <= 13)
-			this.inteligencia = 1;
-		else if(personagem.getInteligencia() <= 15)
-			this.inteligencia = 2;
-		else if(personagem.getInteligencia() <= 17)
-			this.inteligencia = 3;
-		else if(personagem.getInteligencia() <= 19)
-			this.inteligencia = 4;
-		else if(personagem.getInteligencia() >=20)
-			this.inteligencia = 5;
+		if(getInteligencia() == 1) 
+			this.Minteligencia = -5;
+		else if(getInteligencia() <= 3)
+			this.Minteligencia = -4;
+		else if(getInteligencia() <=5)
+			this.Minteligencia = -3;
+		else if(getInteligencia() <= 7)
+			this.Minteligencia = -2;
+		else if(getInteligencia() <= 9)
+			this.Minteligencia = -1;
+		else if(getInteligencia() <= 11)
+			this.Minteligencia = 0;
+		else if(getInteligencia() <= 13)
+			this.Minteligencia = 1;
+		else if(getInteligencia() <= 15)
+			this.Minteligencia = 2;
+		else if(getInteligencia() <= 17)
+			this.Minteligencia = 3;
+		else if(getInteligencia() <= 19)
+			this.Minteligencia = 4;
+		else if(getInteligencia() >=20)
+			this.Minteligencia = 5;
 
-		if(personagem.getCarisma() == 1) 
-			this.carisma = -5;
-		else if(personagem.getCarisma() <= 3)
-			this.carisma = -4;
-		else if(personagem.getCarisma() <=5)
-			this.carisma = -3;
-		else if(personagem.getCarisma() <= 7)
-			this.carisma = -2;
-		else if(personagem.getCarisma() <= 9)
-			this.carisma = -1;
-		else if(personagem.getCarisma() <= 11)
-			this.carisma = 0;
-		else if(personagem.getCarisma() <= 13)
-			this.carisma = 1;
-		else if(personagem.getCarisma() <= 15)
-			this.carisma = 2;
-		else if(personagem.getCarisma() <= 17)
-			this.carisma = 3;
-		else if(personagem.getCarisma() <= 19)
-			this.carisma = 4;
-		else if(personagem.getCarisma() >=20)
-			this.carisma = 5;
+		if(getCarisma() == 1) 
+			this.Mcarisma = -5;
+		else if(getCarisma() <= 3)
+			this.Mcarisma = -4;
+		else if(getCarisma() <=5)
+			this.Mcarisma = -3;
+		else if(getCarisma() <= 7)
+			this.Mcarisma = -2;
+		else if(getCarisma() <= 9)
+			this.Mcarisma = -1;
+		else if(getCarisma() <= 11)
+			this.Mcarisma = 0;
+		else if(getCarisma() <= 13)
+			this.Mcarisma = 1;
+		else if(getCarisma() <= 15)
+			this.Mcarisma = 2;
+		else if(getCarisma() <= 17)
+			this.Mcarisma = 3;
+		else if(getCarisma() <= 19)
+			this.Mcarisma = 4;
+		else if(getCarisma() >=20)
+			this.Mcarisma = 5;
 	}
 
-	public int getForca() {
-		return forca;
+	public int getMforca() {
+		return Mforca;
 	}
 
-	public int getDestreza() {
-		return destreza;
+	public void setMforca(int mforca) {
+		Mforca = mforca;
 	}
 
-	public int getInteligencia() {
-		return inteligencia;
+	public int getMdestreza() {
+		return Mdestreza;
 	}
 
-	public int getSabedoria() {
-		return sabedoria;
+	public void setMdestreza(int mdestreza) {
+		Mdestreza = mdestreza;
 	}
 
-	public int getConstituicao() {
-		return constituicao;
+	public int getMconstituicao() {
+		return Mconstituicao;
 	}
 
-	public int getCarisma() {
-		return carisma;
+	public void setMconstituicao(int mconstituicao) {
+		Mconstituicao = mconstituicao;
 	}
-	
+
+	public int getMinteligencia() {
+		return Minteligencia;
+	}
+
+	public void setMinteligencia(int minteligencia) {
+		Minteligencia = minteligencia;
+	}
+
+	public int getMsabedoria() {
+		return Msabedoria;
+	}
+
+	public void setMsabedoria(int msabedoria) {
+		Msabedoria = msabedoria;
+	}
+
+	public int getMcarisma() {
+		return Mcarisma;
+	}
+
+	public void setMcarisma(int mcarisma) {
+		Mcarisma = mcarisma;
+	}
+
 	public String toString() {
 		return "%nFOR: "
 				+ getForca()

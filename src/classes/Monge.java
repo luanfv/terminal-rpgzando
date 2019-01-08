@@ -1,7 +1,5 @@
 package classes;
 
-import dados.D8;
-
 public class Monge {
 
 	private int vida;
@@ -9,9 +7,6 @@ public class Monge {
 	private String nome = "Monge";
 
 	public Monge() {
-		D8 dado = new D8();
-		
-		this.vida = dado.getD8();
 	}
 	
 	public int getVidaLvl() {

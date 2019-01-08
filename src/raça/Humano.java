@@ -1,55 +1,26 @@
 package raça;
 
-public class Humano {
+public class Humano extends Raca {
 
-		
-	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma;
 	private String nome = "Humano";
 	
-		
-	public Humano() {
-
-		this.forca = 1;
-		this.destreza = 1;
-		this.inteligencia = 1;
-		this.sabedoria = 1;
-		this.constituicao = 1;
-		this.carisma = 1;
+	public String getNome() {
+		return this.nome;
 	}
 
-	public String getNome(){
-		return nome;
+	public void addHumano() {
+		setForca(getForca() + 1);
+		setDestreza(getDestreza() + 1);
+		setConstituicao(getConstituicao() + 1);
+		setInteligencia(getInteligencia() + 1);
+		setSabedoria(getSabedoria() + 1);
+		setCarisma(getCarisma() + 1);
 	}
-
-	public int getForca() {
-		return forca;
-	}
-
-	public int getDestreza() {
-		return destreza;
-	}
-
-	public int getInteligencia() {
-		return inteligencia;
-	}
-
-	public int getSabedoria() {
-		return sabedoria;
-	}
-
-	public int getConstituicao() {
-		return constituicao;
-	}
-
-	public int getCarisma() {
-		return carisma;
-	}
-
+	
 	public String toString() {
-		return "Humano%nFOR: +" + getForca() + "%nDES: +" + getDestreza() + "%nCON: +" + getConstituicao() + "%nINT: +" + getInteligencia() + "%nSAB: +" + getSabedoria() + "%nCAR: +" + getCarisma();
+		return "Humano%nFOR: +" + (getForca() + 1) + "%nDES: +" + (getDestreza() + 1) + "%nCON: +"
+				+ (getConstituicao() + 1) + "%nINT: +" + (getInteligencia() + 1) + "%nSAB: +" + (getSabedoria() + 1)
+				+ "%nCAR: +" + (getCarisma() + 1);
 	}
 
 }
-
-	
-
