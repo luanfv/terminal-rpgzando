@@ -8,10 +8,6 @@ public class ElfoAlto extends Elfo {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public void addElfoAlto() {
 		addElfo();
 		setInteligencia(getInteligencia() + 1);

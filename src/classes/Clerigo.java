@@ -6,7 +6,6 @@ public class Clerigo {
 	private int vidaLvl = 8;
 	private String nome = "Clerigo";
 
-
 	public Clerigo() {
 	}
 	
@@ -20,10 +19,6 @@ public class Clerigo {
 
 	public String getNome() {
 		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public String toString() {

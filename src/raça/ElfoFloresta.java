@@ -8,10 +8,6 @@ public class ElfoFloresta extends Elfo {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public void addElfoFloresta() {
 		addElfo();
 		setSabedoria(getSabedoria() + 1);

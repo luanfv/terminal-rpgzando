@@ -8,10 +8,6 @@ public class ElfoNegro extends Elfo {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public void addElfoNegro() {
 		addElfo();
 		setCarisma(getCarisma() + 1);

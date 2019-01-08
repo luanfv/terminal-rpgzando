@@ -8,10 +8,6 @@ public class AnaoColina extends Anao {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public void addAnaoColina() {
 		addAnao();
 		setSabedoria(getSabedoria() + 1);

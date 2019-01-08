@@ -8,10 +8,6 @@ public class GnomoPedra extends Gnomo {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	public void addGnomoPedra() {
 		addGnomo();
 		setConstituicao(getConstituicao() + 1);

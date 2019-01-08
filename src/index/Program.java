@@ -401,7 +401,8 @@ public class Program {
 		int carisma = sc.nextInt();
 
 		personagem.addAtributos(forca, destreza, constituicao, inteligencia, sabedoria, carisma);
-
+		personagem.addModificador();
+		
 		Tracos();
 		
 		// DEFININDO HP
@@ -417,7 +418,7 @@ public class Program {
 				}
 
 				personagem.setHp(hp + personagem.getMconstituicao());
-				System.out.printf("TOTAL: " + personagem.getHp() + "%nDADO: " + hp + "%nMODIFICADOR: "
+				System.out.printf("%nTOTAL: " + personagem.getHp() + "%nDADO: " + hp + "%nMODIFICADOR: "
 						+ personagem.getMconstituicao());
 			}
 		} else {
@@ -443,8 +444,12 @@ public class Program {
 
 		// PERSONAGEM
 
+		personagem.proficienciaClasseLvl();
+		personagem.addTesteResistencia();
 		personagem.addModificador();
 		System.out.printf(personagem.toString());
+		Tracos();
+		System.out.printf(personagem.toStringResistencia());
 
 		sc.close();
 	}

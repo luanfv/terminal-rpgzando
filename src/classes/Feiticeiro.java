@@ -22,10 +22,6 @@ public class Feiticeiro {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	
 	public String toString() {
 		return "Classe: "
 				+ getNome()

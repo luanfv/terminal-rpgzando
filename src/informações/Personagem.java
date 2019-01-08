@@ -1,7 +1,7 @@
 package informações;
 
 
-public final class Personagem extends Proficiencia{
+public final class Personagem extends TesteDeResistencia{
 	
 	private String nome;
 	
