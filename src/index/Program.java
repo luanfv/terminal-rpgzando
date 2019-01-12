@@ -106,7 +106,7 @@ public class Program {
 				if (escolha == 1) {
 					anaoColina.addAnaoColina();
 					personagem.addRaca(anaoColina.getNome(), anaoColina.getForca(), anaoColina.getDestreza(),
-							anaoColina.getInteligencia(), anaoColina.getSabedoria(), anaoColina.getConstituicao(),
+							anaoColina.getConstituicao(), anaoColina.getInteligencia(), anaoColina.getSabedoria(),
 							anaoColina.getCarisma());
 				} else if (escolha == 2) {
 					anaoMontanha.addAnaoMontanha();
@@ -256,7 +256,21 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(barbaro.getNome(), barbaro.getVidaLvl());
+					Tracos();
+					
+					barbaro.listas();
+					barbaro.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					barbaro.addBarbaro(op1, op2);
+
+					personagem.addClasse(barbaro.getNome(), barbaro.getVidaLvl(), barbaro.getPericia1(),
+							barbaro.getPericia2());
 				}
 			} else if (escolha == 2) {
 				System.out.printf(bardo.toString());
@@ -267,9 +281,26 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(bardo.getNome(), bardo.getVidaLvl());
+					Tracos();
+					
+					bardo.listas();
+					bardo.listaPericias();
+					
+					Tracos();
+					
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					System.out.print("3° escolha: ");
+					int op3 = sc.nextInt();
+					bardo.addBardo(op1, op2, op3);
+
+					personagem.addClasse(bardo.getNome(), bardo.getVidaLvl(), bardo.getPericia1(), bardo.getPericia2(),
+							bardo.getPericia3());
 				}
 			} else if (escolha == 3) {
+
 				System.out.printf(bruxo.toString());
 
 				Tracos();
@@ -278,7 +309,20 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(bruxo.getNome(), bruxo.getVidaLvl());
+					Tracos();
+
+					bruxo.listas();
+					bruxo.listaPericias();
+					
+					Tracos();
+					
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					bruxo.addBruxo(op1, op2);
+					
+					personagem.addClasse(bruxo.getNome(), bruxo.getVidaLvl(),bruxo.getPericia1(), bruxo.getPericia2());
 				}
 			} else if (escolha == 4) {
 				System.out.printf(clerigo.toString());
@@ -382,7 +426,7 @@ public class Program {
 			}
 
 		} while (escolha == 0);
-		
+
 		Tracos();
 
 		// ESCOLHA DOS ATRIBUTOS
@@ -402,11 +446,11 @@ public class Program {
 
 		personagem.addAtributos(forca, destreza, constituicao, inteligencia, sabedoria, carisma);
 		personagem.addModificador();
-		
+
 		Tracos();
-		
+
 		// DEFININDO HP
-		
+
 		VidaDados();
 		escolha = sc.nextByte();
 		if (escolha == 1) {
@@ -444,18 +488,20 @@ public class Program {
 
 		// PERSONAGEM
 
+		personagem.addPericias();
 		personagem.proficienciaClasseLvl();
 		personagem.addTesteResistencia();
 		personagem.addModificador();
+		personagem.addPericias();
 		System.out.printf(personagem.toString());
 		Tracos();
 		System.out.printf(personagem.toStringResistencia());
+		Tracos();
+		System.out.printf(personagem.toStringPericias());
 
 		sc.close();
 	}
 
-	
-	
 	public static void Tracos() {
 		System.out.printf("%n-----------------------------------------%n%n");
 	}
@@ -465,7 +511,7 @@ public class Program {
 	}
 
 	public static void EscolhasAnoes() {
-		System.out.printf("1-Anões da Coluna%n2-Anões da Montanha%n");
+		System.out.printf("1-Anões da Colina%n2-Anões da Montanha%n");
 	}
 
 	public static void EscolhasElfos() {

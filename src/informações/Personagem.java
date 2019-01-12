@@ -1,7 +1,7 @@
 package informações;
 
 
-public final class Personagem extends TesteDeResistencia{
+public final class Personagem extends PericiasPersonagem {
 	
 	private String nome;
 	
@@ -47,11 +47,8 @@ public final class Personagem extends TesteDeResistencia{
 				+ "%nCarisma: "
 				+ getCarisma()
 				+ " +"
-				+ getMcarisma();
+				+ getMcarisma()
+				+ "%n";
 	}
-	
-	
-
-	
 
 }

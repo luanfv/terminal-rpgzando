@@ -114,7 +114,7 @@ public class TesteDeResistencia extends Proficiencia {
 
 	public String toStringResistencia() {
 		return "TESTE DE RESISTENCIA"
-				+ "%nForça: "
+				+ "%n%nForça: "
 				+ getResistenciaForca()
 				+ "%nDestreza: "
 				+ getResistenciaDestreza()

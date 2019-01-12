@@ -1,32 +1,10 @@
 package classes;
 
 
-public class Patrulheiro {
+public class Patrulheiro extends Classe {
 	
-	private int vida;
-	private int vidaLvl = 10;
-	private String nome = "Patrulheiro";
-
 	public Patrulheiro() {
+		setVidaLvl(10);
+		setNome("Patrulheiro");
 	}
-	
-	public int getVidaLvl() {
-		return vidaLvl;
-	}
-
-	public int getVida() {
-		return vida;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public String toString() {
-		return "Classe: "
-				+ getNome()
-				+ "%nHP: 1D10%n";
-	}
-	
-
 }
