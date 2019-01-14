@@ -4,7 +4,7 @@ public abstract class Classe {
 	
 	protected int vida;
 	protected int vidaLvl;
-	protected String nome, pericia1, pericia2, pericia3;
+	protected String nome, pericia1, pericia2, pericia3, pericia4;
 
 	public String getPericia1() {
 		return pericia1;
@@ -28,6 +28,14 @@ public abstract class Classe {
 
 	protected void setPericia3(String pericia3) {
 		this.pericia3 = pericia3;
+	}
+
+	public String getPericia4() {
+		return pericia4;
+	}
+
+	protected void setPericia4(String pericia4) {
+		this.pericia4 = pericia4;
 	}
 
 	public int getVida() {

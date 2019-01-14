@@ -8,7 +8,7 @@ public class Barbaro extends Pericias {
 		setNome("Barbaro");
 	}
 
-	public void addBarbaro(int op1, int op2) {
+	public void pericia(int op1, int op2) {
 		addPericias(op1, op2);
 		System.out.println(getPericia1());
 		System.out.println(getPericia2());
@@ -42,7 +42,6 @@ public class Barbaro extends Pericias {
 			setPericia2(lista.get(13));
 		else if(op2 == 6)
 			setPericia2(lista.get(17));
-		
 	}
 	
 	public void listaPericias() {

@@ -7,7 +7,7 @@ public class Bardo extends Pericias {
 		setNome("Bardo");
 	}
 	
-	public void addBardo(int op1 ,int op2 ,int op3) {
+	public void pericia(int op1 ,int op2 ,int op3) {
 		addPericias(op1, op2, op3);
 		System.out.println(getPericia1());
 		System.out.println(getPericia2());

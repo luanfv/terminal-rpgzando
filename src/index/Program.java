@@ -257,7 +257,7 @@ public class Program {
 				escolha = sc.nextByte();
 				if (escolha == 1) {
 					Tracos();
-					
+
 					barbaro.listas();
 					barbaro.listaPericias();
 
@@ -267,7 +267,7 @@ public class Program {
 					int op1 = sc.nextInt();
 					System.out.print("2° escolha: ");
 					int op2 = sc.nextInt();
-					barbaro.addBarbaro(op1, op2);
+					barbaro.pericia(op1, op2);
 
 					personagem.addClasse(barbaro.getNome(), barbaro.getVidaLvl(), barbaro.getPericia1(),
 							barbaro.getPericia2());
@@ -282,19 +282,19 @@ public class Program {
 				escolha = sc.nextByte();
 				if (escolha == 1) {
 					Tracos();
-					
+
 					bardo.listas();
 					bardo.listaPericias();
-					
+
 					Tracos();
-					
+
 					System.out.print("1° escolha: ");
 					int op1 = sc.nextInt();
 					System.out.print("2° escolha: ");
 					int op2 = sc.nextInt();
 					System.out.print("3° escolha: ");
 					int op3 = sc.nextInt();
-					bardo.addBardo(op1, op2, op3);
+					bardo.pericia(op1, op2, op3);
 
 					personagem.addClasse(bardo.getNome(), bardo.getVidaLvl(), bardo.getPericia1(), bardo.getPericia2(),
 							bardo.getPericia3());
@@ -313,28 +313,33 @@ public class Program {
 
 					bruxo.listas();
 					bruxo.listaPericias();
-					
+
 					Tracos();
-					
+
 					System.out.print("1° escolha: ");
 					int op1 = sc.nextInt();
 					System.out.print("2° escolha: ");
 					int op2 = sc.nextInt();
-					bruxo.addBruxo(op1, op2);
-					
-					personagem.addClasse(bruxo.getNome(), bruxo.getVidaLvl(),bruxo.getPericia1(), bruxo.getPericia2());
+					bruxo.pericia(op1, op2);
+
+					personagem.addClasse(bruxo.getNome(), bruxo.getVidaLvl(), bruxo.getPericia1(), bruxo.getPericia2());
 				}
 			} else if (escolha == 4) {
-				System.out.printf(clerigo.toString());
+				Tracos();
+
+				clerigo.listas();
+				clerigo.listaPericias();
 
 				Tracos();
 
-				EscolhaUnica();
-				Volta();
-				escolha = sc.nextByte();
-				if (escolha == 1) {
-					personagem.addClasse(clerigo.getNome(), clerigo.getVidaLvl());
-				}
+				System.out.print("1° escolha: ");
+				int op1 = sc.nextInt();
+				System.out.print("2° escolha: ");
+				int op2 = sc.nextInt();
+				clerigo.pericia(op1, op2);
+
+				personagem.addClasse(clerigo.getNome(), clerigo.getVidaLvl(), clerigo.getPericia1(),
+						clerigo.getPericia2());
 			} else if (escolha == 5) {
 				System.out.printf(druida.toString());
 
@@ -344,7 +349,21 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(druida.getNome(), druida.getVidaLvl());
+					Tracos();
+
+					druida.listas();
+					druida.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					druida.pericia(op1, op2);
+
+					personagem.addClasse(druida.getNome(), druida.getVidaLvl(), druida.getPericia1(),
+							druida.getPericia2());
 				}
 			} else if (escolha == 6) {
 				System.out.printf(feiticeiro.toString());
@@ -355,7 +374,21 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(feiticeiro.getNome(), feiticeiro.getVidaLvl());
+					Tracos();
+
+					feiticeiro.listas();
+					feiticeiro.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					feiticeiro.pericia(op1, op2);
+
+					personagem.addClasse(feiticeiro.getNome(), feiticeiro.getVidaLvl(), feiticeiro.getPericia1(),
+							feiticeiro.getPericia2());
 				}
 			} else if (escolha == 7) {
 				System.out.printf(guerreiro.toString());
@@ -366,7 +399,21 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(guerreiro.getNome(), guerreiro.getVidaLvl());
+					Tracos();
+
+					guerreiro.listas();
+					guerreiro.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					guerreiro.pericia(op1, op2);
+
+					personagem.addClasse(guerreiro.getNome(), guerreiro.getVidaLvl(), guerreiro.getPericia1(),
+							guerreiro.getPericia2());
 				}
 			} else if (escolha == 8) {
 				System.out.printf(ladino.toString());
@@ -377,7 +424,25 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(ladino.getNome(), ladino.getVidaLvl());
+					Tracos();
+
+					ladino.listas();
+					ladino.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					System.out.print("3° escolha: ");
+					int op3 = sc.nextInt();
+					System.out.print("4° escolha: ");
+					int op4 = sc.nextInt();
+					ladino.pericia(op1, op2, op3, op4);
+
+					personagem.addClasse(ladino.getNome(), ladino.getVidaLvl(), ladino.getPericia1(),
+							ladino.getPericia2(), ladino.getPericia3(), ladino.getPericia4());
 				}
 			} else if (escolha == 9) {
 				System.out.printf(mago.toString());
@@ -388,7 +453,20 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(mago.getNome(), mago.getVidaLvl());
+					Tracos();
+
+					mago.listas();
+					mago.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					mago.pericia(op1, op2);
+
+					personagem.addClasse(mago.getNome(), mago.getVidaLvl(), mago.getPericia1(), mago.getPericia2());
 				}
 			} else if (escolha == 10) {
 				System.out.printf(monge.toString());
@@ -399,7 +477,20 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(monge.getNome(), monge.getVidaLvl());
+					Tracos();
+
+					monge.listas();
+					monge.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					monge.pericia(op1, op2);
+
+					personagem.addClasse(monge.getNome(), monge.getVidaLvl(), monge.getPericia1(), monge.getPericia2());
 				}
 			} else if (escolha == 11) {
 				System.out.printf(paladino.toString());
@@ -410,7 +501,21 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(paladino.getNome(), paladino.getVidaLvl());
+					Tracos();
+
+					paladino.listas();
+					paladino.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					paladino.pericia(op1, op2);
+
+					personagem.addClasse(paladino.getNome(), paladino.getVidaLvl(), paladino.getPericia1(),
+							paladino.getPericia2());
 				}
 			} else if (escolha == 12) {
 				System.out.printf(patrulheiro.toString());
@@ -421,7 +526,23 @@ public class Program {
 				Volta();
 				escolha = sc.nextByte();
 				if (escolha == 1) {
-					personagem.addClasse(patrulheiro.getNome(), patrulheiro.getVidaLvl());
+					Tracos();
+
+					patrulheiro.listas();
+					patrulheiro.listaPericias();
+
+					Tracos();
+
+					System.out.print("1° escolha: ");
+					int op1 = sc.nextInt();
+					System.out.print("2° escolha: ");
+					int op2 = sc.nextInt();
+					System.out.print("3° escolha: ");
+					int op3 = sc.nextInt();
+					patrulheiro.pericia(op1, op2, op3);
+
+					personagem.addClasse(patrulheiro.getNome(), patrulheiro.getVidaLvl(), patrulheiro.getPericia1(),
+							bardo.getPericia2(), patrulheiro.getPericia3());
 				}
 			}
 

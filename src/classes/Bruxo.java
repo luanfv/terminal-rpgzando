@@ -8,7 +8,7 @@ public class Bruxo extends Pericias {
 		setNome("Bruxo");
 	}
 	
-	public void addBruxo(int op1 ,int op2) {
+	public void pericia(int op1 ,int op2) {
 		addPericias(op1, op2);
 		System.out.println(getPericia1());
 		System.out.println(getPericia2());
@@ -50,13 +50,13 @@ public class Bruxo extends Pericias {
 	
 	public void listaPericias() {
 
-			System.out.println("1-" + lista.get(1));
-			System.out.println("2-" + lista.get(4));
-			System.out.println("3-" + lista.get(6));
-			System.out.println("4-" + lista.get(7));
-			System.out.println("5-" + lista.get(9));
-			System.out.println("6-" + lista.get(12));
-			System.out.println("7-" + lista.get(16));
+		System.out.println("1-" + lista.get(1));
+		System.out.println("2-" + lista.get(4));
+		System.out.println("3-" + lista.get(6));
+		System.out.println("4-" + lista.get(7));
+		System.out.println("5-" + lista.get(9));
+		System.out.println("6-" + lista.get(12));
+		System.out.println("7-" + lista.get(16));
 			
 	}
 }

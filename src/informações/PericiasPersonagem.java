@@ -141,6 +141,45 @@ public class PericiasPersonagem extends TesteDeResistencia {
 			setReligiao(getProficiencia());
 		else if(getPericia3() == "Sobrevivencia")
 			setSobrevivencia(getProficiencia());
+		
+		
+		
+		if (getPericia4() == "Acrobacia")
+			setAcrobacia(getProficiencia());
+		else if(getPericia4() == "Arcanismo")
+			setArcanismo(getProficiencia());
+		else if(getPericia4() == "Atletismo")
+			setAtletismo(getProficiencia());
+		else if(getPericia4() == "Atuação")
+			setAtuacao(getProficiencia());
+		else if(getPericia4() == "Blefar")
+			setBlefar(getProficiencia());
+		else if(getPericia4() == "Furtividade")
+			setFurtividade(getProficiencia());
+		else if(getPericia4() == "Historia")
+			setHistoria(getProficiencia());
+		else if(getPericia4() == "Intimidação")
+			setIntimidacao(getProficiencia());
+		else if(getPericia4() == "Intuição")
+			setIntuicao(getProficiencia());
+		else if(getPericia4() == "Investigação")
+			setInvestigacao(getProficiencia());
+		else if(getPericia4() == "Lidar com animais")
+			setLidarAnimais(getProficiencia());
+		else if(getPericia4() == "Meidicina")
+			setMedicina(getProficiencia());
+		else if(getPericia4() == "Natureza")
+			setNatureza(getProficiencia());
+		else if(getPericia4() == "Percepção")
+			setPercepcao(getProficiencia());
+		else if(getPericia4() == "Persuasão")
+			setPersuasao(getProficiencia());
+		else if(getPericia4() == "Prestidigitação")
+			setPrestidigitacao(getProficiencia());
+		else if(getPericia4() == "Religião")
+			setReligiao(getProficiencia());
+		else if(getPericia4() == "Sobrevivencia")
+			setSobrevivencia(getProficiencia());
 	}
 
 	public int getAcrobacia() {
