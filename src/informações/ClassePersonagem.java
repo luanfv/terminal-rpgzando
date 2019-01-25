@@ -5,29 +5,29 @@ public class ClassePersonagem extends RacaPersonagem {
 	private int hp = 0, vidaLvl;
 	private String classeNome, pericia1, pericia2, pericia3, pericia4;
 	
-	public void addClasse(String nome, int vidaLvl) {
+	public void addClasse(String nome, int vidaLvl1) {
 		this.classeNome = nome;
-		this.vidaLvl = vidaLvl;
+		this.vidaLvl = vidaLvl1;
 	}
 	
-	public void addClasse(String nome, int vidaLvl, String op1, String op2) {
+	public void addClasse(String nome, int vidaLvl1, String op1, String op2) {
 		this.classeNome = nome;
-		this.vidaLvl = vidaLvl;
+		this.vidaLvl = vidaLvl1;
 		this.pericia1 = op1;
 		this.pericia2 = op2;
 	}
 	
-	public void addClasse(String nome, int vidaLvl, String op1, String op2, String op3) {
+	public void addClasse(String nome, int vidaLvl1, String op1, String op2, String op3) {
 		this.classeNome = nome;
-		this.vidaLvl = vidaLvl;
+		this.vidaLvl = vidaLvl1;
 		this.pericia1 = op1;
 		this.pericia2 = op2;
 		this.pericia3 = op3;
 	}
 	
-	public void addClasse(String nome, int vidaLvl, String op1, String op2, String op3, String op4) {
+	public void addClasse(String nome, int vidaLvl1, String op1, String op2, String op3, String op4) {
 		this.classeNome = nome;
-		this.vidaLvl = vidaLvl;
+		this.vidaLvl = vidaLvl1;
 		this.pericia1 = op1;
 		this.pericia2 = op2;
 		this.pericia3 = op3;
@@ -81,7 +81,7 @@ public class ClassePersonagem extends RacaPersonagem {
 	}
 
 
-	public void setVidaLvl(int vidaLvl) {
+	protected void setVidaLvl(int vidaLvl) {
 		this.vidaLvl = vidaLvl;
 	}
 

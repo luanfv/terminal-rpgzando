@@ -1,5 +1,7 @@
 package informações;
 
+import excpetion.NivelException;
+
 public abstract class Atributos {
 	
 	private int forca, destreza, inteligencia, sabedoria, constituicao, carisma, nivel;
@@ -9,6 +11,9 @@ public abstract class Atributos {
 	}
 
 	public void setNivel(int nivel) {
+		if(nivel < 1)
+			throw new NivelException("O nivel deve ser acima de 0");
+		
 		this.nivel = nivel;
 	}
 
